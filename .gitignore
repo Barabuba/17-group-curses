@@ -1,6 +1,7 @@
 *.class
 
 # Package Files #
+courses_addressbook/test-output/
 .metadata/
 *.jar
 *.war
