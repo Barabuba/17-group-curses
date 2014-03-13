@@ -2,23 +2,28 @@ package com.example.fv;
 
 import org.openqa.selenium.By;
 
-import com.example.tests.ConactData;
+import com.example.tests.ContactData;
 
 public class ContactHelper extends HelperBase {
 
 	public ContactHelper(ApplicationManager manager) {
 		super(manager);
 		}
+	
+	public void initContactCreation() {
+		click(By.linkText("add new"));
+	}
+
 
 	public void returnToContactList() {
-		click(By.name("submit"));
+		click(By.linkText("home page"));
 	}
 
 	public void submitContactCreation() {
 		click(By.name("submit"));
 	}
 
-	public void fillContactForm(ConactData contact) {
+	public void fillContactForm(ContactData contact) {
 	    type (By.name("firstname"),contact.firstname);
 	    type (By.name("lastname"),contact.lastname);
 	    type (By.name("address"),contact.firstaddress);
@@ -35,8 +40,20 @@ public class ContactHelper extends HelperBase {
 	    type (By.name("phone2"),contact.phone2);
 	  	}
 
-	public void initContactCreation() {
-		click(By.name("submit"));
+	public void deleteContact() {
+		click(By.xpath("(//input[@name='update'])[2]"));
+		
 	}
 
+	public void initContactModification(int index) {
+		click(By.xpath("//input[@name='selected[]'][" + index + "]"));
+		click(By.cssSelector("img[alt=\"Edit\"]"));
+		
+	}
+
+	public void submitContactModification() {
+		click(By.name("update"));
+		
+	}
+		
 }
