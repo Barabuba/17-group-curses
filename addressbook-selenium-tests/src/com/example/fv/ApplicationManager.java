@@ -9,7 +9,7 @@ public class ApplicationManager {
 	
 	private NavigationHelper navigationHelper;
 	private GroupHelper groupHelper;
-	public ContactHelper contactHelper;
+	private ContactHelper contactHelper;
 		
 	public WebDriver driver;
 	public String baseUrl;
