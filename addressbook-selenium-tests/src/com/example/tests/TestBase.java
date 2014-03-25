@@ -32,10 +32,10 @@ public class TestBase {
 	public Iterator<Object[]> randomValidGroupsGenerator() {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (int i = 0; i < 5; i++) {
-			GroupData group = new GroupData();
-		    group.name = generateRandomString();
-		    group.header = generateRandomString();
-		    group.footer = generateRandomString();
+			GroupData group = new GroupData()
+			.withName(generateRandomString())
+			.withHeader(generateRandomString())
+			.withFooter(generateRandomString());
 		    list.add(new Object[]{group});
 	    }
 		return list.iterator();
@@ -48,5 +48,40 @@ public class TestBase {
 		} else {
 			return "test" + rnd.nextInt();
 		}	
+	}
+	@DataProvider
+	public Iterator<Object[]> randomValidContactGenerator() {
+		List <Object[]> list = new ArrayList<Object[]>();
+			for (int i = 0; i < 2; i++){
+			ContactData contact = new ContactData();
+			contact.firstname = generateRandomString2();
+			contact.lastname = generateRandomString2();
+			contact.firstaddress = generateRandomString2();
+			contact.homephone = generateRandomString2();
+			contact.mobilephone = generateRandomString2();
+			contact.workphone = generateRandomString2();
+			contact.email1 = generateRandomString2();
+			contact.email2 = generateRandomString2();
+			contact.daydate = "5";
+			contact.monthname = "May";
+			contact.year = "1995";
+			contact.chosengroup = "group name 1";
+			contact.address2 = generateRandomString2();
+			contact.phone2 = generateRandomString2();
+			list.add(new Object[]{contact});
+		}
+		//....
+		return list.iterator();
+	}
+	
+	public String generateRandomString2(){
+		Random rnd = new Random();
+		if (rnd.nextInt(7) == 0) {
+			return "";
+		}else {
+			return "testdata" + rnd.nextInt();
+				
+		}
+		
 	}
 }

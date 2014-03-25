@@ -20,10 +20,11 @@ public class GroupCreationTest extends TestBase {
     //save old state
     List<GroupData> oldList = app.getGroupHelper().getGroups();
     
-    app.getGroupHelper().initGroupCreation();
-  	app.getGroupHelper().fillGroupCreation(group);
-    app.getGroupHelper().submitGroupCreation();
-    app.getGroupHelper().returnToGroupsPage();
+    app.getGroupHelper()
+    .initGroupCreation()
+  	.fillGroupCreation(group)
+    .submitGroupCreation()
+    .returnToGroupsPage();
     
     //save new state
     List<GroupData> newList = app.getGroupHelper().getGroups();
