@@ -1,65 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8768" started-at="2014-04-06T12:42:51Z" finished-at="2014-04-06T12:42:59Z">
+  <suite name="Default suite" duration-ms="22" started-at="2014-04-11T11:03:18Z" finished-at="2014-04-11T11:03:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8768" started-at="2014-04-06T12:42:51Z" finished-at="2014-04-06T12:42:59Z">
-      <class name="com.example.tests.GroupCreationTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTest@15538e5]" name="setUp" is-config="true" duration-ms="8235" started-at="2014-04-06T15:42:51Z" finished-at="2014-04-06T15:42:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTest@15538e5]" name="testGroupCreationWithValidData" duration-ms="0" started-at="2014-04-06T15:42:59Z" data-provider="groupsFromFile" finished-at="2014-04-06T15:42:59Z">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.ArrayIndexOutOfBoundsException: 1
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:161)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:429)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
-	at com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile(GroupDataGenerator.java:52)
-	at com.example.tests.GroupCreationTest.groupsFromFile(GroupCreationTest.java:22)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
-	... 20 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTest@15538e5]" name="tearDown" is-config="true" duration-ms="511" started-at="2014-04-06T15:42:59Z" finished-at="2014-04-06T15:42:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupCreationTest -->
+    <test name="Default test" duration-ms="22" started-at="2014-04-11T11:03:18Z" finished-at="2014-04-11T11:03:18Z">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
