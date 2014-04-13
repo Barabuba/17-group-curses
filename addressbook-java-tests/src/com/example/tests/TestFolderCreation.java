@@ -28,7 +28,7 @@ public class TestFolderCreation extends TestBase {
 		assertThat (newFolders, equalTo(oldFolders.withAdded(folder1)));
 		assertThat(app.getFolderHelper().createFolder(folder2), is (nullValue())); 
 		Folders newFolders2 = app.getFolderHelper().getFolders();
-		assertThat (newFolders2, equalTo(oldFolders.withAdded(folder2)));
+		assertThat (newFolders2, equalTo(oldFolders.withAdded(folder1).withAdded(folder2)));
 	}
 	
 	@Test

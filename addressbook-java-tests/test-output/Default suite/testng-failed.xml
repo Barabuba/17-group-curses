@@ -8,6 +8,7 @@
           <include name="testVariousFoldersCreation"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="testFoldersWithSameNameCreation"/>
         </methods>
       </class> <!-- com.example.tests.TestFolderCreation -->
     </classes>
