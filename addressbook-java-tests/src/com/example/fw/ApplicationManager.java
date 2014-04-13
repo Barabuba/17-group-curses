@@ -10,13 +10,14 @@ public class ApplicationManager {
 
 	private Object folderHelper;
 	private JFrameOperator mainFrame;
+	private MenuHelper menuHelper;
 
 	public ApplicationManager(Properties properties) {
 		
 			}
 	
 	public void stop() {
-		
+		getApplication().requestClose();
 	   }
 
 	public FolderHelper getFolderHelper() {
@@ -36,6 +37,13 @@ public class ApplicationManager {
 		}	
 	}
 		return mainFrame;
+	}
+
+	public MenuHelper getMenuHelper() {
+		if (menuHelper == null) {
+			menuHelper = new MenuHelper(this);
+		}
+		return (MenuHelper) menuHelper;
 	}
 }
 	

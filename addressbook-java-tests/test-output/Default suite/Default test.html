@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Apr 12 09:58:55 EEST 2014</td>
+<td>Started on:</td><td>Sun Apr 13 10:33:16 EEST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5314 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13735 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,13 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.example.tests.TestFolderCreation.testFolderCreation()'><b>testFolderCreation</b><br>Test class: com.example.tests.TestFolderCreation</td>
+<td title='com.example.tests.TestFolderCreation.testVariousFoldersCreation()'><b>testVariousFoldersCreation</b><br>Test class: com.example.tests.TestFolderCreation</td>
 <td><div><pre>java.lang.AssertionError: 
-Expected: &lt;Folders [[Persons, newfolder]]&gt;
-     but: was &lt;Folders [[Persons]]&gt;
+Expected: &lt;Folders [[Persons, newfolder, newfolder3, newfolder2]]&gt;
+     but: was &lt;Folders [[Persons, newfolder, newfolder3, newfolder1, newfolder2]]&gt;
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.example.tests.TestFolderCreation.testFolderCreation(TestFolderCreation.java:19)
+	at com.example.tests.TestFolderCreation.testVariousFoldersCreation(TestFolderCreation.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -106,13 +106,13 @@ Expected: &lt;Folders [[Persons, newfolder]]&gt;
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2799195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2799195'><pre>java.lang.AssertionError: 
-Expected: &lt;Folders [[Persons, newfolder]]&gt;
-     but: was &lt;Folders [[Persons]]&gt;
+</pre></div><a href='#' onClick='toggleBox("stack-trace23766340", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23766340'><pre>java.lang.AssertionError: 
+Expected: &lt;Folders [[Persons, newfolder, newfolder3, newfolder2]]&gt;
+     but: was &lt;Folders [[Persons, newfolder, newfolder3, newfolder1, newfolder2]]&gt;
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.example.tests.TestFolderCreation.testFolderCreation(TestFolderCreation.java:19)
+	at com.example.tests.TestFolderCreation.testVariousFoldersCreation(TestFolderCreation.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -138,8 +138,26 @@ Expected: &lt;Folders [[Persons, newfolder]]&gt;
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>5</td>
-<td>com.example.tests.TestFolderCreation@1aa7a6a</td></tr>
+<td>6</td>
+<td>com.example.tests.TestFolderCreation@ced6e2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.tests.TestFolderCreation.testFolderCreation()'><b>testFolderCreation</b><br>Test class: com.example.tests.TestFolderCreation</td>
+<td></td>
+<td>3</td>
+<td>com.example.tests.TestFolderCreation@ced6e2</td></tr>
+<tr>
+<td title='com.example.tests.TestFolderCreation.testFoldersWithSameNameCreation()'><b>testFoldersWithSameNameCreation</b><br>Test class: com.example.tests.TestFolderCreation</td>
+<td></td>
+<td>3</td>
+<td>com.example.tests.TestFolderCreation@ced6e2</td></tr>
 </table><p>
 </body>
 </html>

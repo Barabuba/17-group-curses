@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Миша\AppData\Local\Temp\testng-eclipse-1259873410\testng-customsuite.xml</span>
+                    <span>C:\Users\Миша\AppData\Local\Temp\testng-eclipse-380756348\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,10 +101,29 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.TestFolderCreation" hash-for-method="testFolderCreation">testFolderCreation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.TestFolderCreation" hash-for-method="testVariousFoldersCreation">testVariousFoldersCreation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.TestFolderCreation" hash-for-method="testFolderCreation">testFolderCreation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.TestFolderCreation" hash-for-method="testFoldersWithSameNameCreation">testFoldersWithSameNameCreation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -124,15 +143,15 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testFolderCreation">
-                  </a> <!-- testFolderCreation -->
-                  <span class="method-name">testFolderCreation</span>
+                  <a name="testVariousFoldersCreation">
+                  </a> <!-- testVariousFoldersCreation -->
+                  <span class="method-name">testVariousFoldersCreation</span>
                   <div class="stack-trace">java.lang.AssertionError: 
-Expected: &lt;Folders [[Persons, newfolder]]&gt;
-     but: was &lt;Folders [[Persons]]&gt;
+Expected: &lt;Folders [[Persons, newfolder, newfolder3, newfolder2]]&gt;
+     but: was &lt;Folders [[Persons, newfolder, newfolder3, newfolder1, newfolder2]]&gt;
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.example.tests.TestFolderCreation.testFolderCreation(TestFolderCreation.java:19)
+	at com.example.tests.TestFolderCreation.testVariousFoldersCreation(TestFolderCreation.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -163,10 +182,32 @@ Expected: &lt;Folders [[Persons, newfolder]]&gt;
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.tests.TestFolderCreation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFolderCreation">
+                  </a> <!-- testFolderCreation -->
+                  <span class="method-name">testFolderCreation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFoldersWithSameNameCreation">
+                  </a> <!-- testFoldersWithSameNameCreation -->
+                  <span class="method-name">testFoldersWithSameNameCreation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Миша\AppData\Local\Temp\testng-eclipse-1259873410\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Миша\AppData\Local\Temp\testng-eclipse-380756348\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -215,16 +256,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testFolderCreation')
+data.setCell(0, 1, 'testVariousFoldersCreation')
 data.setCell(0, 2, 'com.example.tests.TestFolderCreation')
-data.setCell(0, 3, 5215);
+data.setCell(0, 3, 6325);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testFolderCreation')
+data.setCell(1, 2, 'com.example.tests.TestFolderCreation')
+data.setCell(1, 3, 3982);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testFoldersWithSameNameCreation')
+data.setCell(2, 2, 'com.example.tests.TestFolderCreation')
+data.setCell(2, 3, 3382);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -256,14 +305,22 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <span class="method-name">testFolderCreation</span>
+                <span class="method-start">34 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFoldersWithSameNameCreation</span>
+                <span class="method-start">4017 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testFolderCreation</span>
-                <span class="method-start">88 ms</span>
+                <span class="method-name">testVariousFoldersCreation</span>
+                <span class="method-start">7401 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">5310 ms</span>
+                <span class="method-start">13729 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

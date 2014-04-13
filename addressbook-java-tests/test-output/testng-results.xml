@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5314" started-at="2014-04-12T06:58:55Z" finished-at="2014-04-12T06:59:00Z">
+  <suite name="Default suite" duration-ms="13735" started-at="2014-04-13T07:33:16Z" finished-at="2014-04-13T07:33:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5314" started-at="2014-04-12T06:58:55Z" finished-at="2014-04-12T06:59:00Z">
+    <test name="Default test" duration-ms="13735" started-at="2014-04-13T07:33:16Z" finished-at="2014-04-13T07:33:29Z">
       <class name="com.example.tests.TestFolderCreation">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.TestFolderCreation@1aa7a6a]" name="setUp" is-config="true" duration-ms="47" started-at="2014-04-12T09:58:55Z" finished-at="2014-04-12T09:58:55Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.TestFolderCreation@ced6e2]" name="setUp" is-config="true" duration-ms="24" started-at="2014-04-13T10:33:16Z" finished-at="2014-04-13T10:33:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testFolderCreation()[pri:0, instance:com.example.tests.TestFolderCreation@1aa7a6a]" name="testFolderCreation" duration-ms="5215" started-at="2014-04-12T09:58:55Z" finished-at="2014-04-12T09:59:00Z">
+        <test-method status="PASS" signature="testFolderCreation()[pri:0, instance:com.example.tests.TestFolderCreation@ced6e2]" name="testFolderCreation" duration-ms="3982" started-at="2014-04-13T10:33:16Z" finished-at="2014-04-13T10:33:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFolderCreation -->
+        <test-method status="PASS" signature="testFoldersWithSameNameCreation()[pri:0, instance:com.example.tests.TestFolderCreation@ced6e2]" name="testFoldersWithSameNameCreation" duration-ms="3382" started-at="2014-04-13T10:33:20Z" finished-at="2014-04-13T10:33:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFoldersWithSameNameCreation -->
+        <test-method status="FAIL" signature="testVariousFoldersCreation()[pri:0, instance:com.example.tests.TestFolderCreation@ced6e2]" name="testVariousFoldersCreation" duration-ms="6325" started-at="2014-04-13T10:33:23Z" finished-at="2014-04-13T10:33:29Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[
-Expected: <Folders [[Persons, newfolder]]]]><![CDATA[>
-     but: was <Folders [[Persons]]><![CDATA[]]]]><![CDATA[>]]>
+Expected: <Folders [[Persons, newfolder, newfolder3, newfolder2]]]]><![CDATA[>
+     but: was <Folders [[Persons, newfolder, newfolder3, newfolder1, newfolder2]]><![CDATA[]]]]><![CDATA[>]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: 
-Expected: <Folders [[Persons, newfolder]]]]><![CDATA[>
-     but: was <Folders [[Persons]]]]><![CDATA[>
+Expected: <Folders [[Persons, newfolder, newfolder3, newfolder2]]]]><![CDATA[>
+     but: was <Folders [[Persons, newfolder, newfolder3, newfolder1, newfolder2]]]]><![CDATA[>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.example.tests.TestFolderCreation.testFolderCreation(TestFolderCreation.java:19)
+	at com.example.tests.TestFolderCreation.testVariousFoldersCreation(TestFolderCreation.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -54,8 +62,8 @@ Expected: <Folders [[Persons, newfolder]]]]><![CDATA[>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFolderCreation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.TestFolderCreation@1aa7a6a]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-04-12T09:59:00Z" finished-at="2014-04-12T09:59:00Z">
+        </test-method> <!-- testVariousFoldersCreation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.TestFolderCreation@ced6e2]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-04-13T10:33:29Z" finished-at="2014-04-13T10:33:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
