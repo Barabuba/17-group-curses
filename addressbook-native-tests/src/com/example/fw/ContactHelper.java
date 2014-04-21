@@ -28,7 +28,7 @@ public class ContactHelper extends HelpersBase{
 	private void confirmContactCreation() {
 		manager.getAutoItHelper()      
 		      .click("Save")
-		      .winWaitAndActivate("Addressbook Portable", "", 5000);
+		      .winWaitAndActivate("AddressBook Portable", "", 5000);
 	}
 
 	public Contact getFirstContact() {
@@ -45,6 +45,23 @@ public class ContactHelper extends HelpersBase{
 		 .click("Cancel")
 		 .winWaitAndActivate("AddressBook Portable", "", 5000);
 		return contact;
+		
+	}
+
+	public Contact getSelectedContact() {
+		manager.getAutoItHelper()
+		 .winWaitAndActivate("AddressBook Portable", "", 5000)
+		 .click("TListView1")
+		 .send("{DOWN} {SPACE}");
+		return null;
+	
+	}
+
+	public void deleteContact(Object contact) {
+		manager.getAutoItHelper()
+		.click("Delete")
+		.click("TButton2")
+		.winWaitAndActivate("AddressBook Portable", "", 5000);
 		
 	}
 }
