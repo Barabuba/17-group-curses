@@ -7,11 +7,16 @@ public class ApplicationManager {
 	
 
 	private ContactHelper contactHelper;
-	private Properties props;
+	private Properties properties;
 
 	private Object processHelper;
+	private AutoItHelper autoItHelper;
+
 
 	
+	public ApplicationManager(Properties properties) {
+	this.properties = properties;
+	}
 	
 	public void start() throws IOException {
 		getProcessHelper().startAppUnderTest();	
@@ -21,16 +26,16 @@ public class ApplicationManager {
 		getProcessHelper().stopAppUnderTest();	
 	 }
 	
-	public void setProperties(Properties props) {
-	this.props = props;	
+	public void setProperties(Properties properties) {
+	this.properties = properties;	
 	}
 	
 	public String getProperty(String key) {
-		return props.getProperty(key);
+		return properties.getProperty(key);
 	}
 	
 	public String getProperty(String key, String defaultValue) {
-		return props.getProperty(key, defaultValue);
+		return properties.getProperty(key, defaultValue);
 	}
 
 	public ContactHelper getContactHelper() {
@@ -46,6 +51,15 @@ public class ApplicationManager {
 		}
 		return (ProcessHelper) processHelper;
 	}
+
+public AutoItHelper getAutoItHelper() {
+	if (autoItHelper == null) {
+		autoItHelper = new AutoItHelper(this);
+	}
+	return (AutoItHelper) autoItHelper;
+}
+
+
 }
 	
 	

@@ -19,15 +19,15 @@ public class TestBase {
 	String configFile = System.getProperty("configFile", "application.properties");
 	Properties properties = new Properties();
 	properties.load(new FileReader(new File(configFile)));
-	app = new ApplicationManager();
-	    
-	 }
+	app = new ApplicationManager(properties);
+	app.start();    
+	}
 
 	@AfterTest
 	public void tearDown() throws Exception {
-		app.stop();
+	app.stop();
 	    
-	  }
+	}
 	
 
 		
