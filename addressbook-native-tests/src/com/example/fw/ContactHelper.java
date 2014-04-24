@@ -48,7 +48,7 @@ public class ContactHelper extends HelpersBase{
 		
 	}
 
-	public Contact getSelectedContact() {
+	public Contact getSelectSomeContact() {
 		manager.getAutoItHelper()
 		 .winWaitAndActivate("AddressBook Portable", "", 5000)
 		 .click("TListView1")

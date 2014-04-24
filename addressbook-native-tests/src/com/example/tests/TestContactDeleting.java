@@ -1,15 +1,15 @@
-package com.example.fw;
+package com.example.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import com.example.tests.TestBase;
 
 public class TestContactDeleting extends TestBase{
 	
+	private Object contact;
+	
 	@Test
 	public void shouldDeleteContact() {
-	
+    app.getContactHelper().getSelectSomeContact();
+    app.getContactHelper().deleteContact(contact);
 	}
 
 }
