@@ -35,7 +35,7 @@ public class ContactHelper extends HelpersBase{
 		manager.getAutoItHelper()
 		 .winWaitAndActivate("AddressBook Portable", "", 5000)
 		 .click("TListView1")
-		 .send("{DOWN} {SPACE}")
+		 .send("{DOWN}{SPACE}")
 		 .click("TRbButton3")
 		 .winWaitAndActivate("Update Contact", "", 5000);
 		Contact contact = new Contact()
@@ -52,7 +52,7 @@ public class ContactHelper extends HelpersBase{
 		manager.getAutoItHelper()
 		 .winWaitAndActivate("AddressBook Portable", "", 5000)
 		 .click("TListView1")
-		 .send("{DOWN} {SPACE}");
+		 .send("{DOWN}{SPACE}");
 		return null;
 	
 	}
@@ -60,6 +60,7 @@ public class ContactHelper extends HelpersBase{
 	public void deleteContact(Object contact) {
 		manager.getAutoItHelper()
 		.click("Delete")
+		.winWaitAndActivate("Confirm", "", 5000)
 		.click("TButton2")
 		.winWaitAndActivate("AddressBook Portable", "", 5000);
 		
