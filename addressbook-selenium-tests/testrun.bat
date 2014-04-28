@@ -1,0 +1,2 @@
+java -cp bin;E:\Работа\Курсы\xstream-1.4.7\lib\xstream-1.4.3.jar;E:\Работа\Курсы\xstream-1.4.7\lib\xstream\xpp3_min-1.1.4c.jar;E:\Работа\Курсы\xstream-1.4.7\lib\xstream\xmlpull-1.1.3.1.jar;E:\Работа\Курсы\selenium-server-standalone-2.39.0.jar org.testng.TestNG testng-customsuite.xml
+pause
