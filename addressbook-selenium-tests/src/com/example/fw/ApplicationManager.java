@@ -13,26 +13,17 @@ public class ApplicationManager {
 	private GroupHelper groupHelper;
 	private ContactHelper contactHelper;
 		
-	public WebDriver driver;
+	WebDriver driver;
 	public String baseUrl;
 	private Properties properties;
+	private HibernateHelper hibernateHelper;
 
 
 	
 	public ApplicationManager(Properties properties) {
 		this.properties = properties;
-		String browser = properties.getProperty("browser");
-		if ("firefox".equals(browser)){
-		driver = new FirefoxDriver();	
-		}
-		else if ("chrome".equals(browser)){
-		driver = new ChromeDriver();
-		} else {
-			throw new Error ("Usupported browser" + browser);
-		}
-	    baseUrl = properties.getProperty("baseUrl");
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    driver.get(baseUrl);
+		
+		
 	}
 	
 	public void stop() {
@@ -59,6 +50,33 @@ public class ApplicationManager {
 		}
 		return contactHelper;
 		}
+	
+	public HibernateHelper getHibernateHelper() {
+		if (hibernateHelper == null) {
+			hibernateHelper = new HibernateHelper(this);
+		}
+		return hibernateHelper;
+	}
+
+	public WebDriver getDriver() {
+		String browser = properties.getProperty("browser");
+		if (driver == null) {
+			if ("firefox".equals(browser)){
+				driver = new FirefoxDriver();	
+				}
+				else if ("chrome".equals(browser)){
+				driver = new ChromeDriver();
+				} else {
+					throw new Error ("Usupported browser" + browser);
+				}
+			    baseUrl = properties.getProperty("baseUrl");
+			    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			    driver.get(baseUrl);
+		}
+		return driver;
+		}
+
+	
 	}
 
 	
