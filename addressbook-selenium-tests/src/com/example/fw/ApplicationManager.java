@@ -13,22 +13,28 @@ public class ApplicationManager {
 	private GroupHelper groupHelper;
 	private ContactHelper contactHelper;
 		
-	WebDriver driver;
+	public WebDriver driver;
 	public String baseUrl;
 	private Properties properties;
 	private HibernateHelper hibernateHelper;
-
+	
+	private ApplicationModel model;
 
 	
 	public ApplicationManager(Properties properties) {
 		this.properties = properties;
-		
-		
-	}
+		model = new ApplicationModel();
+		model.SetGroups(getHibernateHelper().listGroups());
+		model.SetContacts(getHibernateHelper().listContacts());
+		}
 	
 	public void stop() {
 		driver.quit(); 
 	   }
+	
+	public ApplicationModel getModel() {
+		return model;
+	}
 	
 	public NavigationHelper navigateTo() {
 		if (navigationHelper == null) {
@@ -75,6 +81,10 @@ public class ApplicationManager {
 		}
 		return driver;
 		}
+	
+	public String getProperty (String key) {
+	  return properties.getProperty(key);	
+	}
 
 	
 	}

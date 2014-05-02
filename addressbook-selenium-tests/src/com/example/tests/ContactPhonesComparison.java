@@ -3,9 +3,9 @@ package com.example.tests;
 import org.openqa.selenium.By;
 
 import com.example.fw.ApplicationManager;
-import com.example.fw.HelperBase;
+import com.example.fw.WebDriverHelperBase;
 
-public class ContactPhonesComparison extends HelperBase{
+public class ContactPhonesComparison extends WebDriverHelperBase{
 
 	public ContactPhonesComparison(ApplicationManager manager) {
 		super(manager);

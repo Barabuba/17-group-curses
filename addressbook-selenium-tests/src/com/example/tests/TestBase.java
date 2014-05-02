@@ -20,6 +20,8 @@ import com.example.fw.ApplicationManager;
 public class TestBase {
 	
 	protected static ApplicationManager app;
+	private int checkCounter;
+	private int ckeckFrequency;
 
 	@BeforeTest
 	public void setUp() throws Exception {
@@ -27,8 +29,20 @@ public class TestBase {
 	Properties properties = new Properties();
 	properties.load(new FileReader(new File(configFile)));
 	app = new ApplicationManager(properties);
-	    
-	 }
+	checkCounter = 0;
+	ckeckFrequency = Integer.parseInt(properties.getProperty("check.frequency", "0"));
+	
+	}
+	
+	protected boolean wantToCheck() {
+		checkCounter++;
+		if (checkCounter > ckeckFrequency) {
+			checkCounter = 0;
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	@AfterTest
 	public void tearDown() throws Exception {

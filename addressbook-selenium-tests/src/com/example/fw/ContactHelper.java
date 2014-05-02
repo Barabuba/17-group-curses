@@ -20,32 +20,7 @@ public class ContactHelper extends WebDriverHelperBase {
 		
 	//--------------------------High level methods-------------------------------------------------------------------------
 
-	private SortedListOf<ContactData> cachedContacts;
-	
-	public SortedListOf<ContactData> getContacts() {
-		if (cachedContacts == null) {
-			rebuildCache();
-		}
-		return cachedContacts;
-	}
-		
-	
-	private void rebuildCache() {
-		cachedContacts = new SortedListOf<ContactData>();
-		
-		manager.navigateTo().mainPage();
-		List<WebElement> checkboxes = driver.findElements (By.name("selected[]"));
-		for (int i = 0; i < checkboxes.size(); i++) {
-			String lastname = manager.driver.findElement(
-			By.xpath(".//*[@id='maintable']/tbody/tr[" + (i + 2)
-			+ "]/td[2]")).getText();
-			String firstname = manager.driver.findElement(
-			By.xpath(".//*[@id='maintable']/tbody/tr[" + (i + 2)
-			+ "]/td[3]")).getText();
-			cachedContacts.add(new ContactData().withLastname(lastname).withFirstname(firstname));
-			}
-		
-	}
+
 
 	public ContactHelper contactCreation(ContactData contact, boolean cREATION2) {
 		    manager.navigateTo().mainPage();
@@ -53,7 +28,8 @@ public class ContactHelper extends WebDriverHelperBase {
 		    fillContactForm(contact, CREATION);
 		    submitContactCreation();
 		    returnToContactList();
-		    rebuildCache();
+			//update model
+			manager.getModel().addContact(contact);
 		    return this;
 	}
 	
@@ -63,7 +39,7 @@ public class ContactHelper extends WebDriverHelperBase {
 		fillContactForm(contact, MODIFICATION);
 		submitContactModification();
 		returnToContactList();
-		rebuildCache();
+		manager.getModel().removeContact(index).addContact(contact);
 		return this;
 		
 	}
@@ -72,7 +48,7 @@ public class ContactHelper extends WebDriverHelperBase {
 		initContactModification(index);
 		deleteContact();
 		returnToContactList();
-		rebuildCache();
+		manager.getModel().removeContact(index);
 		return this;
 	}
 	
@@ -115,13 +91,11 @@ public class ContactHelper extends WebDriverHelperBase {
 
 	public ContactHelper submitContactCreation() {
 		click(By.name("submit"));
-		cachedContacts = null;
 		return this;
 	}
 	
 	public ContactHelper deleteContact() {
 		click(By.xpath("(//input[@name='update'])[2]"));
-		cachedContacts = null;
 		return this;
 	}
 
@@ -132,7 +106,6 @@ public class ContactHelper extends WebDriverHelperBase {
 
 	public ContactHelper submitContactModification() {
 		click(By.name("update"));
-		cachedContacts = null;
 		return this;
 	}
 
