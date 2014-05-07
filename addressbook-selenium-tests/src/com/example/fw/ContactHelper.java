@@ -20,7 +20,23 @@ public class ContactHelper extends WebDriverHelperBase {
 		
 	//--------------------------High level methods-------------------------------------------------------------------------
 
-
+	public SortedListOf<ContactData> getUiContacts() {
+		SortedListOf<ContactData> contacts = new SortedListOf<ContactData>();
+		
+		manager.navigateTo().mainPage();
+		List<WebElement> checkboxes = driver.findElements (By.name("selected[]"));
+		for (int i = 0; i < checkboxes.size(); i++) {
+			String lastname = manager.driver.findElement(
+			By.xpath(".//*[@id='maintable']/tbody/tr[" + (i + 2)
+			+ "]/td[2]")).getText();
+			String firstname = manager.driver.findElement(
+			By.xpath(".//*[@id='maintable']/tbody/tr[" + (i + 2)
+			+ "]/td[3]")).getText();
+			contacts.add(new ContactData().withLastname(lastname).withFirstname(firstname));
+			}
+		
+		return contacts;
+	}
 
 	public ContactHelper contactCreation(ContactData contact, boolean cREATION2) {
 		    manager.navigateTo().mainPage();
